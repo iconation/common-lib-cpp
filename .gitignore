@@ -1,1 +1,4 @@
 build/
+release/
+*.code-workspace
+.vscode
