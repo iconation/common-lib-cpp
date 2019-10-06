@@ -5,20 +5,20 @@
 
 namespace ICONation::Common::JsonRPC
 {
-    class Client
-    {
-        // Allocators
-        public:
-            Client (const std::string &endpoint);
-            ~Client (void);
+class Client
+{
+    // Allocators
+public:
+    Client(const std::string &endpoint);
+    ~Client(void);
 
-        // Commands
-        public:
-            nlohmann::json call (const std::string &method, const nlohmann::json &params);
+    // Commands
+public:
+    nlohmann::json call(const std::string &method, const nlohmann::json &params);
 
-        // Http Client
-        private:
-            std::string m_endpoint;
-            Http::Client m_http;
-    };
-}
+    // Http Client
+private:
+    std::string m_endpoint;
+    Http::Client m_http;
+};
+} // namespace ICONation::Common::JsonRPC

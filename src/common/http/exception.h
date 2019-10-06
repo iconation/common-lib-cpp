@@ -7,8 +7,8 @@
 
 namespace ICONation::Common::Http::Exception
 {
-    struct CurlError : public std::runtime_error {
-        CurlError (const std::string &url, CURLcode code) throw() : 
-            std::runtime_error (fmt::format("URL={} : Error={}", url, curl_easy_strerror(code))) {}
-    };
-}
+struct CurlError : public std::runtime_error
+{
+    CurlError(const std::string &url, CURLcode code) throw() : std::runtime_error(fmt::format("URL={} : Error={}", url, curl_easy_strerror(code))) {}
+};
+} // namespace ICONation::Common::Http::Exception
